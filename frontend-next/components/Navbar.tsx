@@ -1,32 +1,37 @@
-import { NAV_LINKS } from "@/constants"
-import Link from "next/link"
-import Button from '@/components/Button';
+"use client";
+
+import { NAV_LINKS } from "@/constants";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Button from "@/components/Button";
 
 const Navbar = () => {
-    return (
-        <nav className="flexBetween max-container padding-container relative z-30 py-5">
-            <h1>
-                Deepfake Detector
-            </h1>
+  const pathname = usePathname();
 
-            <ul className="hidden h-full gap-12 lg:flex">
-                {NAV_LINKS.map((link) => (
-                    <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-                        {link.label}
-                    </Link>
-                ))}
-            </ul>
+  return (
+    <nav className="flex justify-between items-center p-4 bg-gray-900 text-white">
+      {/* Left: Website Logo/Name */}
+      <div className="flex items-center space-x-2">
+        <span className="text-2xl">🔍</span>
+        <Link href="/">
+          Deepfake Detector
+        </Link>
+      </div>
 
-            <div className="lg:flexCenter hidden">
-                <Button
-                    type="button"
-                    title="Login"
-                    icon="/user.svg"
-                    variant="btn_dark_green"
-                />
-            </div>
-        </nav>
-    )
-}
+      {/* Right: Navigation Links */}
+      <ul className="flex space-x-6">
+        {NAV_LINKS.map((link) => (
+          <li key={link.path}>
+            <Link href={link.path}>
+              
+                {link.label}
+          
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
