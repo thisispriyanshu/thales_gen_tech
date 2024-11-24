@@ -1,0 +1,12 @@
+[2024-11-20 00:59:19,313] INFO in _internal: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-11-20 00:59:19,314] INFO in _internal: [33mPress CTRL+C to quit[0m
+[2024-11-20 00:59:24,039] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 00:59:24] "POST /api/login HTTP/1.1" 200 -
+[2024-11-20 00:59:29,891] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 00:59:29] "[31m[1mPOST /api/login HTTP/1.1[0m" 401 -
+[2024-11-20 00:59:34,792] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 00:59:34] "POST /api/login HTTP/1.1" 200 -
+[2024-11-20 01:01:37,294] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:01:37] "[33mPOST /api/register/ HTTP/1.1[0m" 404 -
+[2024-11-20 01:01:49,781] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:01:49] "[35m[1mPOST /api/register HTTP/1.1[0m" 201 -
+[2024-11-20 01:01:59,842] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:01:59] "POST /api/login HTTP/1.1" 200 -
+[2024-11-20 01:07:00,825] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:07:00] "[31m[1mPOST /api/admin/2fa/enable HTTP/1.1[0m" 422 -
+[2024-11-20 01:10:26,327] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:10:26] "[31m[1mPOST /api/admin/2fa/enable HTTP/1.1[0m" 422 -
+[2024-11-20 01:10:41,276] INFO in _internal: 127.0.0.1 - - [20/Nov/2024 01:10:41] "[31m[1mPOST /api/admin/2fa/enable HTTP/1.1[0m" 422 -
